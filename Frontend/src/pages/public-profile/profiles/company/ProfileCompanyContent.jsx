@@ -1,36 +1,47 @@
-import { Connections, Contributions, Projects, Tags } from '../default';
-import { Statistics, Highlights, OpenJobs, Network, CompanyProfile, Locations } from './blocks';
+import { Connections, Contributions, Projects, Tags } from "../default";
+import {
+  Statistics,
+  Highlights,
+  OpenJobs,
+  Network,
+  CompanyProfile,
+  Locations,
+} from "./blocks";
 const ProfileCompanyContent = () => {
-  const items = [{
-    number: '624',
-    label: 'Employees'
-  }, {
-    number: '60.7M',
-    label: 'Users'
-  }, {
-    number: '369M',
-    label: 'Revenue'
-  }, {
-    number: '27',
-    label: 'Company Rank'
-  }];
-  const data = [{
-    icon: 'dribbble',
-    link: 'https://duolingo.com'
-  }, {
-    icon: 'sms',
-    link: 'info@duolingo.com'
-  }, {
-    icon: 'facebook',
-    link: 'duolingo'
-  }, {
-    icon: 'twitter',
-    link: 'duolingo-news'
-  }, {
-    icon: 'youtube',
-    link: 'duolingo-tuts'
-  }];
-  return <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-7.5">
+  const items = [
+    {
+      number: "200K",
+      label: "Seed Funding",
+    },
+    {
+      number: "1000+",
+      label: "Users",
+    },
+  ];
+  const data = [
+    {
+      icon: "dribbble",
+      link: "https://scriptai.com",
+    },
+    {
+      icon: "sms",
+      link: "info@scriptai.com",
+    },
+    {
+      icon: "facebook",
+      link: "ScriptAI",
+    },
+    {
+      icon: "twitter",
+      link: "ScriptAI-news",
+    },
+    {
+      icon: "youtube",
+      link: "ScriptAI-tuts",
+    },
+  ];
+  return (
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-5 lg:gap-7.5">
       <div className="col-span-1 lg:col-span-3">
         <Statistics items={items} />
       </div>
@@ -38,9 +49,7 @@ const ProfileCompanyContent = () => {
         <div className="flex flex-col gap-5 lg:gap-7.5">
           <Highlights />
 
-          <OpenJobs />
-
-          <Network title="Network" data={data} />
+          <Network title="Contacts & Socials" data={data} />
 
           <Tags title="Tags" />
         </div>
@@ -50,16 +59,9 @@ const ProfileCompanyContent = () => {
           <CompanyProfile />
 
           <Locations />
-
-          <Projects />
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-7.5">
-            <Connections title="Members" />
-
-            <Contributions title="Investments" />
-          </div>
         </div>
       </div>
-    </div>;
+    </div>
+  );
 };
 export { ProfileCompanyContent };
