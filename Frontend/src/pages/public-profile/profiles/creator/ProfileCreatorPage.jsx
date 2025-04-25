@@ -1,4 +1,5 @@
 import { Fragment, useState, useEffect, useContext } from "react";
+import { Link } from "react-router-dom";
 import { toAbsoluteUrl } from "@/utils/Assets";
 import { KeenIcon } from "@/components";
 import { Container } from "@/components/container";
@@ -75,11 +76,11 @@ const ProfileCreatorPage = () => {
   return (
     <Fragment>
       <UserProfileHero
-        name="Jane Doe"
+        name={currentUser.username.toUpperCase()}
         image={image}
         info={[
           {
-            email: "janedoe@example.ocm",
+            email: currentUser.username,
             icon: "sms",
           },
         ]}
@@ -103,7 +104,6 @@ const ProfileCreatorPage = () => {
             />
           </label>
           <br />
-          <input type="text" className="border" />
           <br />
           <div class="btn-group md:ml-[35%] lg:ml-[40%]">
             <button class="btn btn-primary mr-10">Generate Script</button>
@@ -128,9 +128,9 @@ const ProfileCreatorPage = () => {
               {script}
             </div>
             <div className="card-footer justify-center">
-              <a className="btn btn-link" href="#">
+              <Link to="/public-profile/works" className="btn btn-link">
                 Dashboard
-              </a>
+              </Link>
             </div>
           </div>
         </Container>

@@ -46,11 +46,14 @@ const MegaMenuInner = () => {
             placement: isRTL() ? "bottom-end" : "bottom-start",
           }}
         >
-          <MenuLink className={linkClass}>
+          <MenuLink
+            path={publicProfilesItem.children[1].children[0].children[2].path}
+            className={linkClass}
+          >
             <MenuTitle className={titleClass}>DashBoard</MenuTitle>
             {buildArrow()}
           </MenuLink>
-          {MegaMenuSubProfiles(items)}
+          {/* {MegaMenuSubProfiles(items)} */}
         </MenuItem>
 
         <MenuItem
@@ -69,7 +72,10 @@ const MegaMenuInner = () => {
             ],
           }}
         >
-          <MenuLink className={linkClass}>
+          <MenuLink
+            path={publicProfilesItem.children[0].children[0].children[1].path}
+            className={linkClass}
+          >
             <MenuTitle className={titleClass}>CreateScript</MenuTitle>
             {buildArrow()}
           </MenuLink>
@@ -92,7 +98,10 @@ const MegaMenuInner = () => {
             ],
           }}
         >
-          <MenuLink className={linkClass}>
+          <MenuLink
+            path={authItem.children[0].children[1].children[0].path}
+            className={linkClass}
+          >
             <MenuTitle className={titleClass}>Sign In </MenuTitle>
             {buildArrow()}
           </MenuLink>
@@ -115,7 +124,10 @@ const MegaMenuInner = () => {
             ],
           }}
         >
-          <MenuLink className={linkClass}>
+          <MenuLink
+            path={authItem.children[0].children[1].children[1].path}
+            className={linkClass}
+          >
             <MenuTitle className={titleClass}>Register</MenuTitle>
             {buildArrow()}
           </MenuLink>

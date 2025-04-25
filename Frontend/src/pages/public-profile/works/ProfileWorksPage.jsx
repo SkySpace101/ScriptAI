@@ -1,4 +1,5 @@
 import { Fragment, useContext, useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import { Container } from "@/components/container";
 import { toAbsoluteUrl } from "@/utils/Assets";
 import { KeenIcon } from "@/components";
@@ -98,6 +99,12 @@ const ProfileWorksPage = () => {
           },
         ]}
       />
+      <br />
+      <button className="bg-gray-400 p-2 rounded-[10px] text-yellow-500 ml-[600px] text-sm border border-gray-700">
+        <Link to="/public-profile/profiles/creator">Create Script</Link>
+      </button>
+      <br />
+      <br />
 
       <Container>
         <table class="table align-middle text-gray-700 font-medium text-sm">
