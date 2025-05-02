@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import * as Yup from "yup";
 import { useAuthContext } from "../../useAuthContext";
-import { toAbsoluteUrl } from "@/utils";
+// import { toAbsoluteUrl } from "@/utils";
 import { Alert, KeenIcon } from "@/components";
 import { useLayout } from "@/providers";
 const initialValues = {
@@ -96,7 +96,7 @@ const Signup = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2.5">
+        {/* <div className="grid grid-cols-2 gap-2.5">
           <a href="#" className="btn btn-light btn-sm justify-center">
             <img
               src={toAbsoluteUrl("/media/brand-logos/google.svg")}
@@ -116,15 +116,15 @@ const Signup = () => {
             />
             Use Apple
           </a>
-        </div>
+        </div> */}
 
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <span className="border-t border-gray-200 w-full"></span>
           <span className="text-2xs text-gray-500 font-medium uppercase">
             Or
           </span>
           <span className="border-t border-gray-200 w-full"></span>
-        </div>
+        </div> */}
 
         {formik.status && <Alert variant="danger">{formik.status}</Alert>}
 

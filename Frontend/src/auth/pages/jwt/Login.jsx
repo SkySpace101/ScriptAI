@@ -4,7 +4,7 @@ import clsx from "clsx";
 import * as Yup from "yup";
 import { useFormik } from "formik";
 import { KeenIcon } from "@/components";
-import { toAbsoluteUrl } from "@/utils";
+// import { toAbsoluteUrl } from "@/utils";
 import { useAuthContext } from "@/auth";
 import { useLayout } from "@/providers";
 import { Alert } from "@/components";
@@ -92,7 +92,7 @@ const Login = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2.5">
+        {/* <div className="grid grid-cols-2 gap-2.5">
           <a href="#" className="btn btn-light btn-sm justify-center">
             <img
               src={toAbsoluteUrl("/media/brand-logos/google.svg")}
@@ -112,17 +112,17 @@ const Login = () => {
             />
             Use Apple
           </a>
-        </div>
+        </div> */}
 
-        <div className="flex items-center gap-2">
+        {/* <div className="flex items-center gap-2">
           <span className="border-t border-gray-200 w-full"></span>
           <span className="text-2xs text-gray-500 font-medium uppercase">
             Or
           </span>
           <span className="border-t border-gray-200 w-full"></span>
-        </div>
+        </div> */}
 
-        <Alert variant="primary">
+        {/* <Alert variant="primary">
           Use{" "}
           <span className="font-semibold text-gray-900">
             demo@keenthemes.com
@@ -130,7 +130,7 @@ const Login = () => {
           username and{" "}
           <span className="font-semibold text-gray-900">demo1234</span>{" "}
           password.
-        </Alert>
+        </Alert> */}
 
         {formik.status && <Alert variant="danger">{formik.status}</Alert>}
 

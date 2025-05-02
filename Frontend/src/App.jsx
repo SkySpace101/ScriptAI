@@ -4,7 +4,8 @@ import { useSettings } from "@/providers/SettingsProvider";
 import { AppRouting } from "@/routing";
 import { PathnameProvider } from "@/providers";
 import { Toaster } from "@/components/ui/sonner";
-const { BASE_URL } = import.meta.env;
+// import { Accordion } from "./components/accordion/Accordion";
+const { VITE_BASE_URL } = import.meta.env;
 const App = () => {
   const { settings } = useSettings();
 
@@ -14,9 +15,11 @@ const App = () => {
     document.documentElement.classList.add(settings.themeMode);
   }, [settings]);
 
+  // const children = [<h1>Hello</h1>, <h1>buffellow</h1>, <h1>Yellow</h1>];
+
   return (
     <BrowserRouter
-      basename={BASE_URL}
+      basename={VITE_BASE_URL}
       future={{
         v7_relativeSplatPath: true,
         v7_startTransition: true,
@@ -28,5 +31,10 @@ const App = () => {
       <Toaster />
     </BrowserRouter>
   );
+  //   <>
+  //     <h1>Hello World!</h1>
+  //     <Accordion children={children} />
+  //   </>
+  // );
 };
 export { App };

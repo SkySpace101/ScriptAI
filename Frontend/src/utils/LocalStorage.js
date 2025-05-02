@@ -10,9 +10,7 @@ const getData = (key) => {
 };
 const setData = (key, value) => {
   try {
-    // console.log(`This is the auth ${value}`);
     localStorage.setItem(key, JSON.stringify(value));
-    // console.log(localStorage);
   } catch (error) {
     console.error("Save in local storage", error);
   }
